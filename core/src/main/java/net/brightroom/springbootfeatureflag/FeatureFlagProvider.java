@@ -1,5 +1,5 @@
 package net.brightroom.springbootfeatureflag;
 
-interface FeatureFlagProvider {
+public interface FeatureFlagProvider {
   boolean isFeatureEnabled(String featureName);
 }

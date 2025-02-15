@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@interface FeatureFlag {
+public @interface FeatureFlag {
   String feature() default "";
 
   boolean required() default true;

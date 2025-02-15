@@ -12,9 +12,6 @@ class InMemoryFeatureFlagProvider implements FeatureFlagProvider {
 
   @Override
   public boolean isFeatureEnabled(String featureName) {
-    if (!features.containsKey(featureName)) {
-      return true;
-    }
-    return features.get(featureName);
+    return features.getOrDefault(featureName, false);
   }
 }
