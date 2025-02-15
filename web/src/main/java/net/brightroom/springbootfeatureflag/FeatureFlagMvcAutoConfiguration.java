@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
 
 @AutoConfigureAfter(FeatureFlagAutoConfiguration.class)
-public class FeatureFlagMvcAutoConfiguration {
+class FeatureFlagMvcAutoConfiguration {
 
   @Bean
   FeatureFlagInterceptor featureFlagInterceptor(FeatureFlagProvider featureFlagProvider) {

@@ -15,3 +15,4 @@ rootProject.name = "spring-boot-feature-flag"
 
 include("core")
 include("web")
+include("webflux")
