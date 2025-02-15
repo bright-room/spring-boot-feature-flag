@@ -12,3 +12,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "spring-boot-feature-flag"
+
+include("core")
