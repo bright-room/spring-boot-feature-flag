@@ -17,3 +17,8 @@ spring-boot-starter-webflux = { module = "org.springframework.boot:spring-boot-s
 spring-boot-configuration-processor = { module = "org.springframework.boot:spring-boot-configuration-processor" }
 
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+
+#########################################
+# unit test library
+#########################################
+rest-assured = { module = "io.rest-assured:rest-assured", version = { strictly = "5.5.0" } }

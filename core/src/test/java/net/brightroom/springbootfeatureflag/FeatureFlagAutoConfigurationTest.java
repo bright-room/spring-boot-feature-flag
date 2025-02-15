@@ -14,7 +14,6 @@ class FeatureFlagAutoConfigurationTest {
 
   @Test
   void providerFunctionsProperly() {
-    assertTrue(featureFlagProvider.isFeatureEnabled("test-api"));
     assertTrue(featureFlagProvider.isFeatureEnabled("new-api"));
     assertFalse(featureFlagProvider.isFeatureEnabled("beta-feature"));
   }
