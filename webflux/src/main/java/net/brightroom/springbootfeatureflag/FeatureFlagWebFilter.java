@@ -15,11 +15,18 @@ import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
 
+/**
+ * WebFlux filter implementation for Feature Flag checking. This filter intercepts WebFlux requests
+ * and checks for Feature Flag annotations at both method and class levels.
+ *
+ * <p>The filter is configured with the highest precedence to ensure feature flag checking occurs
+ * before other processing.
+ */
 @Order(Ordered.HIGHEST_PRECEDENCE)
-class FeatureFlagWebFilter implements WebFilter {
+public class FeatureFlagWebFilter implements WebFilter {
 
-  FeatureFlagProvider featureFlagProvider;
-  RequestMappingHandlerMapping handlerMapping;
+  private final FeatureFlagProvider featureFlagProvider;
+  private final RequestMappingHandlerMapping handlerMapping;
 
   @Override
   @NonNull
