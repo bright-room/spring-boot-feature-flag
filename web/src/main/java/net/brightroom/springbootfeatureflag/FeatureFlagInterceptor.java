@@ -10,9 +10,13 @@ import org.springframework.lang.NonNull;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-class FeatureFlagInterceptor implements HandlerInterceptor {
+/**
+ * Spring MVC interceptor for Feature Flag checking. This interceptor handles feature flag checks
+ * for MVC endpoints by intercepting requests before they reach the handlers.
+ */
+public class FeatureFlagInterceptor implements HandlerInterceptor {
 
-  FeatureFlagProvider featureFlagProvider;
+  private final FeatureFlagProvider featureFlagProvider;
 
   @Override
   public boolean preHandle(
